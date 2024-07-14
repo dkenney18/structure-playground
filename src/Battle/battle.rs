@@ -17,10 +17,6 @@ impl<'a> Battle<'a> {
         let attacker_damage = rounds.max_attacker_rounds * self.attacker.get_damage();
         let defender_damage = rounds.max_defender_rounds * self.defender.get_damage();
 
-        //println!("{}", rounds);
-        //println!("Attacker Total Damage: {}", attacker_damage);
-        //println!("Defender Total Damage: {}", defender_damage);
-
         println!(
             "{} attacks {}",
             self.attacker.get_name(),
@@ -53,9 +49,6 @@ impl<'a> Battle<'a> {
        for item in items {
         attacker.backpack.add_item(item.unwrap()); // Unwrap the Option to get the actual item
        }
-    
-        //println!("Items transferred to {}'s backpack:", attacker.get_name());
-        //println!("{}", attacker_backpack); // Display attacker's updated backpack
     }
 
     fn get_max_rounds(&self) -> Round {
